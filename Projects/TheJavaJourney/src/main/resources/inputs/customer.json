@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Alice",
+    "purchaseHistory": [100.0, 50.0, 200.0]
+  },
+  {
+    "name": "Bob",
+    "purchaseHistory": [75.0, 125.0]
+  },
+  {
+    "name": "Raju",
+    "purchaseHistory": [75.0, 125.0,100.0]
+  },
+  {
+    "name": "Charlie",
+    "purchaseHistory": [150.0, 300.0, 250.0]
+  }
+]
