@@ -9,10 +9,23 @@
   },
   {
     "name": "Raju",
+    "purchaseHistory": [71.0, 125.0,100.0]
+  },
+  {
+    "name": "Raju",
     "purchaseHistory": [75.0, 125.0,100.0]
   },
   {
     "name": "Charlie",
     "purchaseHistory": [150.0, 300.0, 250.0]
+  },
+  {
+    "name": "Charlie",
+    "purchaseHistory": [250.0, 300.0, 250.0]
+  },
+  {
+    "name": "Charlie",
+    "purchaseHistory": [151.0, 300.0, 250.0]
   }
+
 ]
