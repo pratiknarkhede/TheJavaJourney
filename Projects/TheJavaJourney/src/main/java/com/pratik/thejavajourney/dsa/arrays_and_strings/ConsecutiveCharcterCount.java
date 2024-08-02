@@ -1,4 +1,4 @@
-package com.pratik.thejavajourney.dsa.strings;
+package com.pratik.thejavajourney.dsa.arrays_and_strings;
 
 public class ConsecutiveCharcterCount {
 
