@@ -9,7 +9,7 @@ public class ValidAnagrams {
 
     public static void main(String[] args) {
         String s = "aacc", t = "ccac";
-        boolean isItAnagram = isAnagramUsingHashMap(s, t);
+        boolean isItAnagram = isAnagramOptimized(s, t);
         System.out.println(isItAnagram);
     }
 
@@ -54,4 +54,22 @@ public class ValidAnagrams {
         return false;
     }
 
+    //optimized solution
+    //first populate the hashmap with frequency
+    //for second hashmap for each occurence decremenet respective value in hashmap
+    //if value become negative then false, if all zeroes then anagram
+
+    public static boolean isAnagramOptimized(String s, String t) {
+        if (s.length() != t.length()) return false;
+        HashMap<Character, Integer> sHashMap = new HashMap<>();
+        for (char c : s.toCharArray()) {
+            sHashMap.put(c,sHashMap.getOrDefault(c,0)+1);
+        }
+
+        for (char c:t.toCharArray()){
+            sHashMap.put(c,sHashMap.getOrDefault(c,0)-1);
+            if(sHashMap.get(c)<0) return false;
+        }
+        return true;
+    }
 }
