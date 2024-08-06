@@ -9,6 +9,7 @@ public class ReverSeAString {
 
         reverseString1(s1);
         reverseString2(s1);
+        reverseString3(s1);
     }
 
 
@@ -27,6 +28,23 @@ public class ReverSeAString {
         }
         System.out.println("In reverseString2 "+new String(revsersed));
     }
+
+    private static void reverseString3(String s){
+        int i=0,j=s.length()-1;
+        char[] charArray = s.toCharArray();
+        while(i<j){
+           char temp=charArray[i];
+           charArray[i]=charArray[j];
+           charArray[j]=temp;
+            i++;
+            j--;
+        }
+        s=new String(charArray);
+        System.out.println("In reverseString3 "+s);
+
+    }
+
+
 
 
 }
