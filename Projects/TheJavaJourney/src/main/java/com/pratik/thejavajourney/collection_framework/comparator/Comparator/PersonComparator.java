@@ -1,4 +1,4 @@
-package com.pratik.thejavajourney.collection_framework.comparator;
+package com.pratik.thejavajourney.collection_framework.comparator.Comparator;
 
 import java.util.Comparator;
 
