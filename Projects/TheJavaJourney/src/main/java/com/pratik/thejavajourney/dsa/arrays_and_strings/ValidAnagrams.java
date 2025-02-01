@@ -28,8 +28,11 @@ public class ValidAnagrams {
     //convert to hashmap and and check the occurance of each character is same in boths strings
 
     public static boolean isAnagramUsingHashMap(String s, String t) {
+        //first check for length if mismatch surely it is not anagram
         if (s.length() != t.length()) return false;
         HashMap<Character, Integer> sHashMap = new HashMap<>();
+
+        //populate hashmap with character frequency of each character for first string
         for (char c : s.toCharArray()) {
             if (sHashMap.containsKey(c)) {
                 sHashMap.put(c, sHashMap.get(c) + 1);
@@ -39,6 +42,7 @@ public class ValidAnagrams {
         }
         System.out.println(sHashMap);
 
+        //populate hashmap with character frequency of character for second string
         HashMap<Character, Integer> tHashMap = new HashMap<>();
         for (char c : t.toCharArray()) {
             if (tHashMap.containsKey(c)) {
@@ -47,6 +51,7 @@ public class ValidAnagrams {
                 tHashMap.put(c, 1);
             }
         }
+        //if both hashmaps are equal then they are anagrams
         System.out.println(tHashMap);
         if (sHashMap.equals(tHashMap)) {
             return true;
