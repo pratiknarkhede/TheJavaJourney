@@ -1,8 +1,7 @@
 package com.pratik.thejavajourney.dsa.heap;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.PriorityQueue;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class KthLargestElement {
     public static void main(String[] args) {
@@ -10,6 +9,9 @@ public class KthLargestElement {
         int k = 2;
         int kthLargest = findKthLargest(nums, k);
         System.out.println(kthLargest);
+
+        int kSmallest = findKSmallest(nums, k);
+        System.out.println(kSmallest);
     }
 
     private static int findKthLargest(int[] nums, int k) {
@@ -33,7 +35,17 @@ public class KthLargestElement {
         for(int element : nums){
             priorityQueue.offer(element);
         }
-        for(int i=0;i<k-1;i++){
+
+
+/*  Another way to initliaze Q
+      List<Integer> list = Arrays.stream(nums)
+                                      .boxed()
+                                      .collect(Collectors.toList());
+
+        PriorityQueue<Integer> priorityQueue=new PriorityQueue<>(list);*/
+
+
+        for(int i = 0; i<k-1; i++){
             priorityQueue.poll();
         }
         int kthSmallestElement = priorityQueue.poll();
