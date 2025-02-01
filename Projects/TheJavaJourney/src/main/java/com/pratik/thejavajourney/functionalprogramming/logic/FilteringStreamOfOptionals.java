@@ -20,6 +20,10 @@ public class FilteringStreamOfOptionals {
         //using java 9 optional stream
         solution2(listOfOptionals);
 
+        Optional<String> s = Optional.of("test");
+        System.out.println(Optional.of("TEST"));
+        System.out.println( s.map(String::toUpperCase));
+
     }
 
     private static void solution2(List<Optional<String>> listOfOptionals) {
